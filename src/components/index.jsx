@@ -10,6 +10,7 @@ import Error from './Error'
 import ProductImages from './ProductImages/ProductImages'
 import AddToCart from './AddToCart/AddToCart'
 import Filters from './Filters/Filters'
+import Loading from './Loading'
 import ProductList from './ProductList'
 import Sort from './Sort/Sort'
 import Stars from './Stars/Stars'
@@ -23,6 +24,7 @@ export {
   CartButtons,
   Footer,
   Sidebar,
+  Loading,
   Hero,
   Services,
   Contact,
