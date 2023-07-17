@@ -21,7 +21,7 @@ const SingleProductPage = () => {
 
   useEffect(() => {
     // https://e-commerce-node-5wf2.onrender.com/api/v1/products/${id}
-    fetchSingleProduct(`http://localhost:5000/api/v1/products/${id}`)
+    fetchSingleProduct(`https://e-commerce-node-5wf2.onrender.com/api/v1/products/${id}`)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

@@ -6,7 +6,6 @@ import Sidebar from './Sidebar/Sidebar'
 import Hero from './Hero/Hero'
 import Services from './Services/Services'
 import Contact from './Contact/Contact'
-import Loading from './Loading'
 import Error from './Error'
 import ProductImages from './ProductImages/ProductImages'
 import AddToCart from './AddToCart/AddToCart'
@@ -27,7 +26,6 @@ export {
   Hero,
   Services,
   Contact,
-  Loading,
   Error,
   ProductImages,
   AddToCart,
