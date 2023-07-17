@@ -1,3 +1,8 @@
 [build]
 functions = "./functions"
 targetPort = 4173
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
