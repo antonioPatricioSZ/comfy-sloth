@@ -6,9 +6,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-      },
+      input: "src/main.js", // Path to your entry point file
     },
+  },
+  optimizeDeps: {
+    include: ["dependency-package"], // Add the package name(s) here
   },
 });
