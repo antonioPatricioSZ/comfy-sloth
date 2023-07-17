@@ -1,0 +1,28 @@
+
+.main {
+   height: 400px;
+}
+
+.se img {
+   width: 100%;
+   display: block;
+   border-radius: var(--radius);
+   object-fit: cover;
+}
+
+.gallery {
+   margin-top: 1rem;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   column-gap: 1rem;
+}
+
+.gallery   img {
+   height: 100px;
+   cursor: pointer;
+}
+
+
+.active {
+   box-shadow: 0px 0px 0px 2px var(--clr-primary-5);
+}

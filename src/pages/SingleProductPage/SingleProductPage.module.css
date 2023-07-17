@@ -1,0 +1,47 @@
+
+.productCenter {
+   display: grid;
+   gap: 4rem;
+   margin-top: 2rem;
+}
+
+.teste {
+   align-self: flex-start;
+}
+
+
+.content {
+   align-self: flex-start;
+}
+
+
+.price {
+  color: var(--clr-primary-5);
+}
+
+.desc {
+  line-height: 2;
+  max-width: 45em;
+}
+
+.info {
+  text-transform: capitalize;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 125px 1fr;
+}
+
+.info span {
+   font-weight: 700;
+}
+
+@media (min-width: 992px) {
+   .productCenter {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+   }
+   
+   .price {
+      font-size: 1.25rem;
+   }
+}

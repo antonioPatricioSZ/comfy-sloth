@@ -1,0 +1,32 @@
+
+.div {
+   display: none;
+}
+
+@media (min-width: 776px) {
+   .div {
+      display: block;
+   }
+
+   .content {
+      display: grid;
+      grid-template-columns: 316px 1fr 1fr 1fr auto;
+      justify-items: center;
+      column-gap: 1rem;
+   }
+
+   .content h5 {
+      color: var(--clr-grey-5);
+      font-weight: 400;
+   }
+
+   .div span {
+      width: 2rem;
+      height: 2rem;
+   }
+
+   .div hr {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+   }
+}

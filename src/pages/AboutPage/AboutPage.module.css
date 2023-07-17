@@ -1,0 +1,42 @@
+
+.se {
+   display: grid;
+   gap: 4rem;
+}
+
+.se img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  height: 400px;
+  object-fit: cover;
+}
+
+.se p {
+  line-height: 2;
+  max-width: 45em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: var(--clr-grey-5);
+}
+
+.title {
+  text-align: left;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.25rem;
+  background: var(--clr-primary-5);
+}
+
+
+@media (min-width: 992px) {
+  .se {
+      grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,75 @@
+
+.se {
+   display: grid;
+   place-items: center;
+}
+
+.imgContainer {
+   display: none;
+}
+
+.se h1 {
+   font-size: 2rem;
+}
+
+.se p {
+   line-height: 2;
+   max-width: 45em;
+   margin-bottom: 2rem;
+   color: var(--clr-grey-5);
+   font-size: 1rem;
+}
+@media (min-width: 992px) {
+   .se {
+      grid-template-columns: 1fr 1fr;
+      gap: 8rem;
+   }
+   .se h1 {
+      margin-bottom: 2rem;
+   }
+   .se p {
+      font-size: 1.25rem;
+   }
+   .heroBtn {
+   padding: 0.75rem 1.5rem;
+   font-size: 1rem;
+   }
+
+   .imgContainer {
+      display: block;
+      position: relative;
+   }
+
+   .mainImg {
+      width: 100%;
+      height: 480px;
+      position: relative;
+      border-radius: var(--radius);
+      display: block;
+      object-fit: cover;
+   }
+
+   .accentImg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 220px;
+      transform: translateX(-50%);
+      border-radius: var(--radius);
+   }
+   .imgContainer::before {
+      content: '';
+      position: absolute;
+      width: 10%;
+      height: 80%;
+      background: var(--clr-primary-9);
+      bottom: 0%;
+      left: -8%;
+      border-radius: var(--radius);
+   }
+
+   .se h1 {
+      font-size: 3rem;
+   }
+
+}

@@ -1,0 +1,23 @@
+
+.pageHe {
+   background: var(--clr-primary-10);
+   width: 100%;
+   min-height: 20vh;
+   display: flex;
+   align-items: center;
+   color: var(--clr-primary-1);
+}
+
+.pageHe h3 {
+   font-size: 1.875rem;
+}
+
+.pageHe a {
+   color: var(--clr-primary-3);
+   padding: 0.5rem;
+   transition: var(--transition);
+}
+
+.pageHe a:hover {
+   color: var(--clr-primary-1);
+}

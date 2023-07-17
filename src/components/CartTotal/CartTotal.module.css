@@ -1,0 +1,43 @@
+
+.se {
+   margin-top: 3rem;
+   display: flex;
+   justify-content: center;
+}
+
+.se article {
+   border: 1px solid var(--clr-grey-8);
+   border-radius: var(--radius);
+   padding: 1.5rem 3rem;
+}
+
+.se h4 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin-top: 2rem;
+}
+
+.se h5 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.se p {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  text-transform: capitalize;
+}
+ 
+
+ @media (min-width: 776px) {
+   .se {
+      justify-content: flex-end;
+   }
+ }
+
+.bt {
+   width: 100%;
+   margin-top: 1rem;
+   text-align: center;
+   font-weight: 700;
+}
