@@ -8,7 +8,7 @@ import styles from './CartItem.module.css'
 
 const CartItem = ({ id, image, images = 0, name, color, price, amount}) => {
   const { removeItem, toggleAmount } = useCartContext()
-
+  console.log(id, image, images, name, color, price, amount)
   const increase = () => {
     toggleAmount(id, "inc")
   }

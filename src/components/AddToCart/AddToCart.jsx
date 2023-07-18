@@ -12,7 +12,9 @@ const AddToCart = ({ product }) => {
 
   const { addToCart } = useCartContext()
   // eslint-disable-next-line react/prop-types
-  const {_id: id, stock, colors } = product
+  console.log("Product: ")
+  console.log(product)
+  const {_id: id, stock, colors } = product.singleProduct
 
   const [mainColor, setMainColor] = useState(colors ? colors[0] : [])
   const [amount, setAmount] = useState(1)
@@ -46,7 +48,7 @@ const AddToCart = ({ product }) => {
       </div>
       <div className={styles.btnContainer}>
         <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-        <Link to={"/cart"} className="btn" onClick={() => addToCart(id, mainColor, amount, product)}>add to cart</Link>
+        <Link to={"/cart"} className="btn" onClick={() => addToCart(id, mainColor, amount, product.singleProduct)}>add to cart</Link>
       </div>
     </section>
   )

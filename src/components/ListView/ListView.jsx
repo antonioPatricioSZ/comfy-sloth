@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom'
 import styles from './ListView.module.css'
 
 const ListView = ({ products }) => {
+
   return (
     <section className={styles.se}>
       {products.map((product) => {
-         const { id, name, price, description, image, images } = product
+         const { _id: id, name, price, description, image, images } = product
          return (
             <article key={id}>
               <img src={image ? image : images[0]} alt={name} />

@@ -7,6 +7,7 @@ import styles from "./CartTotal.module.css";
 
 const CartTotals = () => {
   const { total_amount, shipping_fee } = useCartContext();
+  console.log(total_amount)
   const { myUser, loginWithRedirect } = useUserContext();
 
   return (

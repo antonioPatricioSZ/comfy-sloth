@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import styles from './Product.module.css'
 
 // eslint-disable-next-line react/prop-types
-const Product = ({ id, name, price, image, images }) => {
+const Product = ({ _id: id, name, price, image, images }) => {
+  console.log(id)
   return (
     <article className={styles.art}>
       <div className={styles.container}>

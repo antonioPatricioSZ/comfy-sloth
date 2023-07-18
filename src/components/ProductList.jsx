@@ -6,7 +6,7 @@ import ListView from './ListView/ListView'
 const ProductList = () => {
 
   const { filtered_products: products, grid_view  } = useFilterContext()
-
+  console.log(products)
   if(grid_view === false) {
     return (
       <div style={{ marginBottom: "5rem" }}>

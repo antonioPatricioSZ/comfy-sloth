@@ -41,11 +41,12 @@ const SingleProductPage = () => {
   // if(error) {
   //   return <Error />
   // }
+  console.log(id)
 
   if (loading) {
     return <Loading />;
   }
-
+  
   const {
     _id: sku,
     name,
@@ -53,9 +54,9 @@ const SingleProductPage = () => {
     category,
     description,
     stock,
-    images,
     company,
   } = product.singleProduct || {};
+  
 
   return (
     <main>
@@ -68,7 +69,7 @@ const SingleProductPage = () => {
         </Link>
         <div className={styles.productCenter}>
           <div className={styles.teste}>
-            <ProductImages images={images} />
+            <ProductImages images={product.singleProduct?.images} />
           </div>
           <section className={styles.content}>
             <h2>{name}</h2>
@@ -90,7 +91,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart product={product.singleProduct} />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
