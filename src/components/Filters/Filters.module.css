@@ -64,7 +64,6 @@
    width: 1rem;
    height: 1rem;
    border-radius: 50%;
-   background: #222;
    border: none;
    cursor: pointer;
    opacity: 0.5;
@@ -73,6 +72,22 @@
 .colorBtn > svg {
    font-size: 0.5rem;
    color: var(--clr-white);
+   position: relative;
+   top: -4px;
+}
+
+.branco {
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   border: none;
+   cursor: pointer;
+   opacity: 1;
+}
+
+.branco > svg {
+   font-size: 0.5rem;
+   color: #000;
    position: relative;
    top: -4px;
 }

@@ -7,8 +7,8 @@ import styles from "./CartTotal.module.css";
 
 const CartTotals = () => {
   const { total_amount, shipping_fee } = useCartContext();
-  console.log(total_amount)
-  const { myUser, loginWithRedirect } = useUserContext();
+  console.log(total_amount);
+  const { auth } = useUserContext();
 
   return (
     <section className={styles.se}>
@@ -26,18 +26,14 @@ const CartTotals = () => {
             <span>{formatPrice(total_amount + shipping_fee)}</span>
           </h4>
         </article>
-        {myUser ? (
+        {auth ? (
           <Link to={"/checkout"} className={`${styles.bt} btn`}>
             proceed to checkout
           </Link>
         ) : (
-          <button
-            type="button"
-            className={`${styles.bt} btn`}
-            onClick={loginWithRedirect}
-          >
+          <Link to={"/checkout"} className={`${styles.bt} btn`}>
             login
-          </button>
+          </Link>
         )}
       </div>
     </section>

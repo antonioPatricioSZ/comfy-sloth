@@ -9,7 +9,6 @@ import { formatPrice } from "../utils/helpers";
 
 const CheckoutForm = () => {
   const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
-  const { myUser } = useUserContext();
 
   // stripe
   const [succeeded, setSucceeded] = useState(false);
@@ -96,9 +95,8 @@ const CheckoutForm = () => {
         </article>
       ) : (
         <article>
-          <h4>Hello, {myUser && myUser.name}</h4>
-          <p>Your total is {formatPrice(total_amount + shipping_fee)}</p>
-          <p>Test Card Number: 4242 4242 4242 4242</p>
+          <h4>Olá</h4>
+          <p>Seu total é:  {formatPrice(total_amount + shipping_fee)}</p>
         </article>
       )}
       <form className={styles.form} id="payment-form" onSubmit={handleSubmit}>

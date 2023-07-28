@@ -1,0 +1,9 @@
+.button {
+   min-width: 12rem;
+   padding: 0.7rem 0px !important;
+}
+
+.button:disabled {
+   opacity: 0.5;
+   cursor: wait;
+}

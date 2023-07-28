@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
       </div>
       <div className={`${styles.featured} section-center`}>
         {featured && featured.map((product) => {
-          return <Product key={product.id} {...product} image={img}/>
+          return <Product key={product.id} {...product} image={product.image ? product.image : product.images[0]}/>
         })}
       </div>
       <Link to={"/products"} className={`${styles.bt}`}>all products</Link>

@@ -1,0 +1,58 @@
+  .dv {
+    margin: 0 auto;
+    max-width: 40rem;
+    margin-top: 3rem;
+  }
+  
+  .dv h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .login::before {
+    content: "";
+    display: block;
+    background: url("../../../Assets/login.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  
+  .form {
+    width: 100%;
+  }
+  
+  .esqueceuSenha {
+    font-size: 0.85rem;
+    text-align: right;
+    color: rgb(3, 3, 133);
+    margin-top: -1rem;
+    cursor: pointer;
+  }
+  
+  .esqueceuSenha:hover {
+    color: rgb(84, 84, 204);
+  }
+  
+  .nPossuiConta {
+     margin-top: 0.75rem;
+  }
+  
+  .nPossuiConta a {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .nPossuiConta a:hover {
+    color: rgb(84, 84, 204);
+  }
+  
+  @media (max-width: 40rem) {
+    .login {
+      grid-template-columns: 1fr;
+    }
+    .login::before {
+      display: none;
+    }
+    .form {
+      max-width: 100%;
+    }
+  }
+  

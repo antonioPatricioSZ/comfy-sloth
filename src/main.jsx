@@ -8,29 +8,20 @@ import { ProductsProvider } from "./context/products_context";
 import { FilterProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
 import { UserProvider } from "./context/user_context";
-import { Auth0Provider } from "@auth0/auth0-react";
-
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Auth0Provider
-      domain={"dev-uaa37oij3376jmna.us.auth0.com"}
-      clientId={"YH5jICphoViyuFIJPwSufXUxnPzIGV9N"}
-      authorizationParams={{
-        redirect_uri: window.location.origin
-      }}
-      cacheLocation="localstorage"
-    >
-      <UserProvider>
-        <ProductsProvider>
-          <FilterProvider>
-            <CartProvider>
-              <App />
-            </CartProvider>
-          </FilterProvider>
-        </ProductsProvider>
-      </UserProvider>
-    </Auth0Provider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <ToastContainer position="top-right" autoClose={1500} />
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </React.StrictMode>
 );

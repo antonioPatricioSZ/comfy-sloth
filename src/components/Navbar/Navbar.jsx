@@ -10,7 +10,7 @@ import styles from "./Navbar.module.css";
 
 const Nav = () => {
   const { openSidebar } = useProductsContext();
-  const { myUser } = useUserContext();
+  const { auth } = useUserContext()
 
   return (
     <nav className={styles.nav}>
@@ -37,7 +37,7 @@ const Nav = () => {
               </li>
             );
           })}
-          {myUser && (
+          {auth && (
             <li>
               <Link to={"/checkout"}>checkout</Link>
             </li>

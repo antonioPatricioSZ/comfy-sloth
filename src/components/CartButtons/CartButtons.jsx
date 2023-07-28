@@ -1,6 +1,6 @@
 import React from "react";
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useProductsContext } from "../../context/products_context";
 import { useCartContext } from "../../context/cart_context";
 import { useUserContext } from "../../context/user_context";
@@ -9,14 +9,14 @@ import styles from "./CartButtons.module.css";
 const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { total_items, clearCart } = useCartContext();
-  const { loginWithRedirect, logout, myUser } = useUserContext();
+  const { logout, auth } = useUserContext();
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    loginWithRedirect({
-      theme: {
-        logo: "https://imgur.com/a/WQFEycK",
-      },
-    });
+  const handleLogout = () => {
+    logout();
+    setTimeout(() => {
+      navigate("/");
+    }, 500);
   };
 
   return (
@@ -28,25 +28,23 @@ const CartButtons = () => {
           <span className={styles.cartValue}>{total_items}</span>
         </span>
       </Link>
-      {myUser ? (
+      {auth ? (
         <button
           type="button"
           className={styles.authBtn}
           onClick={() => {
-            clearCart()
-            logout({
-              returnTo: window.location.origin,
-            })
+            clearCart();
+            handleLogout();
           }}
         >
           Logout
           <FaUserMinus />
         </button>
       ) : (
-        <button type="button" className={styles.authBtn} onClick={handleLogin}>
+        <Link to={"/login"} className={styles.authBtn}>
           Login
           <FaUserPlus />
-        </button>
+        </Link>
       )}
     </div>
   );

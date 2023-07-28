@@ -54,7 +54,6 @@
    display: inline-block;
    width: 0.5rem;
    height: 0.5rem;
-   background: red;
    margin-left: 0.5rem;
    border-radius: var(--radius);
 }
