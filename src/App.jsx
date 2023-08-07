@@ -26,6 +26,10 @@ import jwtDecode from "jwt-decode";
 import dayjs from "dayjs";
 import { useEffect } from "react";
 import { useState } from "react";
+import Reviews from "./pages/Reviews/Reviews";
+import MyCount from "./pages/MyCount/Mycount";
+import AlterarSenha from "./pages/AlterarSenha/AlterarSenha";
+import Perfil from "./pages/Perfil/Perfil";
 
 function App() {
   const { auth, loadingAuth, role } = useUserContext();
@@ -86,11 +90,27 @@ function App() {
                   )
                 }
               />
+
               <Route path="/products/:id" element={<SingleProduct />} />
+              <Route
+                path="/myCount/*"
+                element={auth ? <MyCount /> : <Navigate to={"/login"} />}
+              >
+                <Route
+                  path=""
+                  element={auth ? <Perfil /> : <Navigate to={"/login"} />}
+                />
+                <Route
+                  path="alterarSenha"
+                  element={auth ? <AlterarSenha /> : <Navigate to={"/login"} />}
+                />
+              </Route>
+
               <Route
                 path="/checkout"
                 element={auth ? <CheckOut /> : <Navigate to={"/login"} />}
               />
+              <Route path="/reviews/:id" element={<Reviews />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </div>

@@ -1,0 +1,28 @@
+
+.se {
+    display: flex;
+    width: 87vw;
+    margin: 0 auto;
+    border: 1px solid red;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.aside {
+    width: 25%;
+    border: 1px solid red;
+    height: 100vh;
+    padding:2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.routes {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}

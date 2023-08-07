@@ -1,0 +1,136 @@
+.reviewsContainer {
+  max-width: 54rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background-color: rgb(241, 241, 241);
+  border-radius: 6px;
+  padding: 2rem 4rem;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.dv {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem calc(8rem + 15px) 3rem 8rem;
+}
+
+.dv form {
+  margin: 0 auto;
+  min-width: 50%;
+  background: rgb(240, 240, 240);
+  padding: 3rem 4rem;
+  border-radius: 8px;
+}
+
+.dv textarea {
+  resize: none;
+  height: 100px;
+}
+
+.dv h1 {
+  margin-bottom: 3rem;
+}
+
+.dv input {
+  margin-bottom: 0.75rem;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.radio div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio input {
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0;
+}
+
+.wraper {
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  padding: 0.8rem;
+  width: 100%;
+  transition: 0.2s;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  border-radius: 0.4rem;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  border-color: #fb1;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+}
+
+.close {
+  color: red;
+  font-size: 1.6rem;
+  transition: 0.1s;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.close:hover {
+  color: rgb(185, 1, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.headerReviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.sortInput {
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+.formSort {
+  display: flex;
+  flex-direction: column;
+}

@@ -26,7 +26,7 @@ const SingleProductPage = () => {
   useEffect(() => {
     // https://e-commerce-node-5wf2.onrender.com/api/v1/products/${id}
     fetchSingleProduct(
-      `https://e-commerce-node-5wf2.onrender.com/api/v1/products/${id}`
+      `http://localhost:5000/api/v1/products/${id}`
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -73,7 +73,7 @@ const SingleProductPage = () => {
           </div>
           <section className={styles.content}>
             <h2>{name}</h2>
-            <Stars stars={product.mediaReviews} reviews={product.qtdReviews} />
+            <Stars stars={product.mediaReviews} id={sku} reviews={product.qtdReviews} />
             <h5 className={styles.price}>{formatPrice(price)}</h5>
             <p className={styles.desc}>{description}</p>
             <p className={styles.info}>

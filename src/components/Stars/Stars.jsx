@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 import styles from './Stars.module.css'
 
 // eslint-disable-next-line react/prop-types
-const Stars = ({ stars, reviews }) => {
-
+const Stars = ({ stars, reviews, id }) => {
+console.log(id)
   const tempStars = Array.from( {length: 5}, (_, index) => {
     const number = index + 0.5
     return (
@@ -44,7 +45,7 @@ const Stars = ({ stars, reviews }) => {
 
       </div>
       <p>{stars > 0 ? stars.toFixed(1).replace(".", ",") : "0,0"}</p>
-      <p className='reviews'>({reviews} customer reviews)</p>
+      <p className='reviews'><Link to={`/reviews/${id}`}>({reviews} customer reviews)</Link></p>
     </div>
   )
 }

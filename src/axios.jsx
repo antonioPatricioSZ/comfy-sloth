@@ -1,7 +1,6 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import dayjs from "dayjs";
-import { useNavigate } from "react-router-dom";
 
 const instance = axios.create({
   baseURL: "http://localhost:5000/api/v1",
@@ -9,11 +8,6 @@ const instance = axios.create({
     "Content-Type": "application/json",
   },
 });
-
-const nav = (rota) => {
-  const navigate = useNavigate();
-  navigate(rota);
-};
 
 const isTokenExpired = (token) => {
   if (!token) {
@@ -35,7 +29,7 @@ instance.interceptors.request.use(
     const token = localStorage.getItem("token");
 
     if (token && !isTokenExpired(token)) {
-      config.headers.Authorization = `Bearer ${token}`;
+      config.headers.authorization = `Bearer ${token}`;
     }
     return config;
   },
@@ -47,7 +41,6 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   (response) => response,
   (error) => {
-    console.log("Erro: " + error.response);
     if (error.response.status === 401) {
       localStorage.removeItem("token");
       window.location.href = "/login"
